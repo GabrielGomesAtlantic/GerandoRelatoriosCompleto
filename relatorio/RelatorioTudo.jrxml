@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioTudo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c088713e-e72c-4a8b-a144-c556183c7a5c">
+	<parameter name="SUB_REPORT_DIRETORIO" class="java.lang.Object"/>
+	<parameter name="nomeClan" class="java.lang.String"/>
+	<parameter name="listaPersonagens" class="java.util.Collection"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nick" class="java.lang.String"/>
+	<field name="level" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="120">
+			<subreport>
+				<reportElement isPrintRepeatedValues="false" x="30" y="40" width="510" height="50" isRemoveLineWhenBlank="true" uuid="3402976b-5c12-4d1e-b747-a53ee6bd7600"/>
+				<subreportParameter name="nomeClan">
+					<subreportParameterExpression><![CDATA[$P{nomeClan}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{listaPersonagens}) ]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUB_REPORT_DIRETORIO}]]></subreportExpression>
+			</subreport>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="50"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="240" y="0" width="100" height="30" uuid="ed2cb257-0a8d-414b-9c43-09d9aec20cb3"/>
+				<text><![CDATA[Relatório tudo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="174" splitType="Stretch"/>
+	</detail>
+</jasperReport>

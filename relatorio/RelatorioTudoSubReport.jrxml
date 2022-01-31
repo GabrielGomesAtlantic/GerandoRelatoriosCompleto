@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioTudoSubReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da5ff34b-0553-47dc-aa79-7b7bebf7c0c6">
+	<parameter name="nomeClan" class="java.lang.String"/>
+	<parameter name="nick" class="java.lang.String"/>
+	<parameter name="level" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nick" class="java.lang.String"/>
+	<field name="level" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="240" y="14" width="100" height="30" isRemoveLineWhenBlank="true" uuid="3fe57e55-2a75-412b-bfa9-ecdfa4a5485f"/>
+				<textFieldExpression><![CDATA[$P{nomeClan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="180" y="15" width="100" height="30" isRemoveLineWhenBlank="true" uuid="dd462362-b4e3-4c29-b489-5b3957d614a1"/>
+				<textFieldExpression><![CDATA[$F{nick}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" x="280" y="15" width="100" height="30" isRemoveLineWhenBlank="true" uuid="fb96659f-b8cf-41c0-a597-99e60c23a6fe"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

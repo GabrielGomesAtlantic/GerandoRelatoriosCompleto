@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioExemploSimplesComParametroELista" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c558136c-32d6-4e4f-a071-458396711280">
+	<parameter name="nomeClan" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nick" class="java.lang.String"/>
+	<field name="level" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="10" width="310" height="31" uuid="27f4af89-c67d-4c1a-bbbf-92ea89e25cd7"/>
+				<text><![CDATA[RelatorioExemploSimplesComParametroELista]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="50" width="192" height="30" uuid="2cc2dafa-c1ce-4203-af21-ed9020c96add"/>
+				<textFieldExpression><![CDATA[$P{nomeClan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="33" width="70" height="31" uuid="7ac7f122-fa37-430d-8905-7d74620e8d70"/>
+				<text><![CDATA[Nick]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="30" width="70" height="31" uuid="f07ba607-886e-4f61-a680-8f6507282bfc"/>
+				<text><![CDATA[Level]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="190" y="10" width="100" height="30" uuid="4176eecf-67c3-4db3-927b-16a134559e0f"/>
+				<textFieldExpression><![CDATA[$F{nick}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="10" width="100" height="30" uuid="597972e4-0b58-480d-ae55-589c4a6eef09"/>
+				<textFieldExpression><![CDATA[$F{level}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
